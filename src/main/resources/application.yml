@@ -12,12 +12,16 @@ girl:
 spring:
   profiles:
     active: prod
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/cloud?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
 
-datasource:
-  driver-class-name: com.mysql.jdbc.Driver
-  url: jdbc:mysql://localhost:3306/cloud?useUnicode=true&characterEncoding=utf8&characterSetResults=utf8
-  username: root
-  password: root
 
 jpa:
   hibernate:
